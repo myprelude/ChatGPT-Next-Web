@@ -447,7 +447,7 @@
   background-color: var(--white);
   color: var(--black);
   font-family: inherit;
-  padding: 10px 90px 10px 14px;
+  padding: 10px 60px 10px 14px;
   resize: none;
   outline: none;
   box-sizing: border-box;
@@ -461,10 +461,17 @@
 .chat-input-send {
   background-color: var(--primary);
   color: white;
-
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 55px;
+  border-radius: 4px;
+  transform: translate(0, -4px);
+  height: 34px;
   position: absolute;
-  right: 30px;
-  bottom: 32px;
+  right: 25px;
+  top: 50%;
 }
 
 @media only screen and (max-width: 600px) {
