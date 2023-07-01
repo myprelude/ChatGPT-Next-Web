@@ -497,6 +497,12 @@ export function Chat() {
   const isMobileScreen = useMobileScreen();
   const navigate = useNavigate();
 
+  useEffect(() => {
+    if (!accessStore.isAuthorized()) {
+      navigate(Path.Auth);
+    }
+  }, []);
+
   const onChatBodyScroll = (e: HTMLElement) => {
     const isTouchBottom = e.scrollTop + e.clientHeight >= e.scrollHeight - 10;
     setHitBottom(isTouchBottom);
